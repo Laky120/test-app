@@ -1,0 +1,152 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test app",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Get list of notes",
+                "operationId": "3d73c1bd15a87c7733e017d856f4b710",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/create": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Page for create new notes",
+                "operationId": "e32f222722066f240e8d8a713bcb1283",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/find": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Page for find notes",
+                "operationId": "d9427cfac06af4c33ff6dba083fe5c54",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/create/check": {
+            "post": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Create new notes",
+                "operationId": "8f753d11e36931008ee81dc01ff383a7",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/find/check": {
+            "post": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Find notes",
+                "operationId": "cd7a7908f699b6738b91d98624381187",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/delete/check": {
+            "post": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Delete notes",
+                "operationId": "db377c950d0db8827b11fc7927a740dd",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/update": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Page for update notes",
+                "operationId": "32226c99aafbea5a8f05dafb0e537f10",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/update/check": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Update notes",
+                "operationId": "f6162da7869d975a978716c552d7f376",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Notes": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "full_name": {
+                        "type": "string"
+                    },
+                    "company": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "integer"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "birthday": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "photo": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}

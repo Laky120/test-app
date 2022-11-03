@@ -18,11 +18,14 @@
         </div>
     @endif
     <div style="width: 400px">
-    <form method="post" action="/create/check">
+    <form method="post" action="/create/check" enctype="multipart/form-data">
         @csrf
-        <input type="number" name="number" id="number" placeholder="Введите номер" class="form-control"><br>
-        <input type="text" name="type" id="type" placeholder="Введите тип" class="form-control"><br>
-        <input type="text" name="file" id="file" placeholder="Введите файл" class="form-control"><br>
+        <input type="text" name="full_name" id="full_name" placeholder="Введите ФИО" class="form-control" autofocus="autofocus"><br>
+        <input type="text" name="company" id="company" placeholder="Введите компанию" class="form-control"><br>
+        <input type="number" name="phone" id="phone" placeholder="Введите телефон" class="form-control"><br>
+        <input type="email" name="email" id="email" placeholder="Введите почту" class="form-control"><br>
+        <input type="date" name="birthday" id="birthday" placeholder="Введите дату рождения" class="form-control"><br>
+        <input type="file" name="photo" id="photo" placeholder="Загрузите фото" size="30000" class="form-control"><br>
         <button type="submit" class="btn btn-success">Создать</button>
     </form>
     </div>

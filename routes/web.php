@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MainController;
+use App\Http\Controllers\NotesController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -16,19 +16,22 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('/', [NotesController::class, 'home'])->name('home');
 
-Route::get('/create', [MainController::class, 'create'])->name('create');
+Route::get('/create', [NotesController::class, 'create'])->name('create');
 
-Route::get('/find', [MainController::class, 'find'])->name('find');
+Route::get('/find', [NotesController::class, 'find'])->name('find');
 
-Route::get('/delete', [MainController::class, 'delete'])->name('delete');
+Route::post('/create/check', [NotesController::class, 'create_check']);
 
-Route::post('/create/check', [MainController::class, 'create_check']);
+Route::get('/find/check', [NotesController::class, 'find_check']);
 
-Route::get('/find/check', [MainController::class, 'find_check']);
+Route::post('/delete/check', [NotesController::class, 'delete_check']);
 
-Route::post('/delete/check', [MainController::class, 'delete_check']);
+Route::get('/update', [NotesController::class, 'update'])->name('update');
+
+Route::post('/update/check', [NotesController::class, 'update_check'])->name('update_check');
+
 
 
 
